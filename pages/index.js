@@ -1,6 +1,15 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-export default function Home() {
+import { useGetUsersQuery } from '../services/usersApi';
+
+const Home = () => {
+
+  const { data: users, isLoading, error } = useGetUsersQuery();
+
+  console.log(users)
+
+  if (isLoading) return <p>Loading...</p>;
+  
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
@@ -80,3 +89,15 @@ export default function Home() {
     </div>
   )
 }
+
+// export async function getStaticProps() {
+//   const users = await useGetUsersQuery();
+
+//   return {
+//     props: {
+//       users: users.data,
+//     },
+//   }
+// }
+
+export default Home;
