@@ -5,6 +5,9 @@ import millify from "millify";
 import { AiFillHeart } from "react-icons/ai";
 import { FaKissWinkHeart } from "react-icons/fa";
 import { HiOutlineStatusOnline } from "react-icons/hi";
+import { RiRadioButtonLine } from "react-icons/ri";
+
+import { getRandomNumber } from "../../utils/getRandomNumber";
 
 import styles from "./UserCard.module.css";
 
@@ -38,11 +41,14 @@ const UserCard = ({ users }) => {
                     <div className={styles.textWrapper}>
                         <p className={styles.text_p}>"{user.headline}"</p>
                         <span>{user.online_status === "ONLINE"
-                            ? <span className={styles.online}><HiOutlineStatusOnline /></span>
-                            : <span className={styles.offline}><HiOutlineStatusOnline /></span> }</span>
+                            ? <span className={styles.online}><RiRadioButtonLine /></span>
+                            : <span className={styles.offline}><RiRadioButtonLine /></span> }</span>
                         <p className={styles.text}>{user?.personal.age}</p>
                         <h3 className={styles.text_distance}>{user?.location?.city} | {millify(user?.location?.distance)}m </h3>
-                        <h1 className={styles.text}>{user.name}</h1>
+                        <h1 className={styles.text}>{user?.name}</h1>
+                        {user.online_status !== "ONLINE"
+                            && <p className={styles.text_last_online}>Last online: {getRandomNumber()} minutes ago</p>
+                            }
                     </div>
                 </div>
             ))}

@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import { Navbar, UserCard } from '../components';
 
+import {GiGlassHeart} from 'react-icons/gi';
+
 import Loader from '../components/Loader';
 
 import { useGetUsersQuery } from '../services/usersApi';
@@ -9,7 +11,7 @@ const Home = () => {
 
   const { data: users, isLoading, error } = useGetUsersQuery();
 
-  if (error) return <p>Ooops! Something went wrong. Please try again :)</p>;
+  if (error) return <p>Ooops! Something went wrong. Please try again <GiGlassHeart /></p>;
   if (isLoading) return <Loader />;
   
   return (
@@ -34,7 +36,6 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           Made with ❤️ by EdisonAbdiel
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
         </a>
       </footer>
     </div>
