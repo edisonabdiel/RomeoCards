@@ -51,9 +51,9 @@
   }
 
   .online {
-    @apply text-green-500 float-right;
+    @apply text-green-500 text-xl float-right;
   }
 
   .offline {
-    @apply text-red-500 float-right;
+    @apply text-red-500 text-xl float-right;
   }
