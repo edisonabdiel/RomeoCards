@@ -7,6 +7,8 @@ import Loader from '../components/Loader';
 
 import { useGetUsersQuery } from '../services/usersApi';
 
+import styles from '../styles/index.module.css';
+
 const Home = () => {
 
   const { data: users, isLoading, error } = useGetUsersQuery();
@@ -15,20 +17,20 @@ const Home = () => {
   if (isLoading) return <Loader />;
   
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className={styles.wrapper}>
       <Head>
         <title>RomeoCards</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className={styles.container_main}>
         <Navbar />
-        <div className="flex flex-wrap items-center justify-around max-w-6xl mt-6 sm:w-full">
+        <div className={styles.container_cards}>
           <UserCard users={users} />
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
+      <footer className={styles.footer}>
         <a
           className="flex items-center justify-center"
           href="https://github.com/edisonabdiel"

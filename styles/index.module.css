@@ -1,0 +1,15 @@
+.wrapper {
+    @apply flex flex-col items-center justify-center min-h-screen py-2;
+}
+
+.container_main {
+    @apply flex flex-col items-center justify-center w-full flex-1 px-20 text-center;
+}
+
+.container_cards {
+    @apply flex flex-wrap items-center justify-around max-w-6xl mt-6 sm:w-full;
+}
+
+.footer {
+    @apply flex items-center justify-center w-full h-24 border-t;
+}
