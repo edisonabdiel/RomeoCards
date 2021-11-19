@@ -35,7 +35,7 @@ const UserCard = ({ users }) => {
                         </div>
                     </div>
                     <div className={styles.textWrapper}>
-                        <p className={styles.text_p}>{user.headline}</p>
+                        <p className={styles.text_p}>"{user.headline}"</p>
                         <span>{user.online_status === "ONLINE"
                             ? <span className={styles.online}><HiOutlineStatusOnline /></span>
                             : <span className={styles.offline}><HiOutlineStatusOnline /></span> }</span>
