@@ -1,0 +1,23 @@
+.nav_container {
+ @apply container mx-auto px-6 mb-6;
+}
+
+.wrapper {
+  @apply border-b w-full inline-block py-6;
+}
+
+.wrapper_logo {
+    @apply md:float-left block;
+}
+
+.logo {
+    @apply text-gray-300 cursor-pointer hover:text-purple-400 transform ease-in-out transition duration-700;
+}
+
+.logo_bold {
+    @apply font-extrabold hover:text-purple-400 transition ease-in-out duration-700 cursor-pointer;
+}
+
+.badge {
+    @apply hidden md:float-left md:contents text-xl m-2
+}

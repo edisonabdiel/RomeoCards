@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import millify from "millify";
+//Icons
 import { AiFillHeart } from "react-icons/ai";
 import { FaKissWinkHeart } from "react-icons/fa";
 import { HiOutlineStatusOnline } from "react-icons/hi";

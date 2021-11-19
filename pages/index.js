@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import UserCard from '../components/userCard/UserCard';
+import { Navbar, UserCard } from '../components';
 
 import { useGetUsersQuery } from '../services/usersApi';
 
@@ -19,10 +19,7 @@ const Home = () => {
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Navbar Goes here
-        </h1>
-
+        <Navbar />
         <div className="flex flex-wrap items-center justify-around max-w-6xl mt-6 sm:w-full">
           <UserCard users={users} />
         </div>
