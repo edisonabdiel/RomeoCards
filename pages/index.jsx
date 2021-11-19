@@ -1,15 +1,16 @@
 import Head from 'next/head';
 import { Navbar, UserCard } from '../components';
 
+import Loader from '../components/Loader';
+
 import { useGetUsersQuery } from '../services/usersApi';
 
 const Home = () => {
 
   const { data: users, isLoading, error } = useGetUsersQuery();
 
-  console.log(users)
-
-  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Ooops! Something went wrong. Please try again :)</p>;
+  if (isLoading) return <Loader />;
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -38,6 +39,6 @@ const Home = () => {
       </footer>
     </div>
   )
-}
+};
 
 export default Home;
