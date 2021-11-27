@@ -57,11 +57,17 @@ Users are fictional and used for demo porpuses only.
 
 ## API
 
-Refer to the [API](https://github.com/edisonabdiel/RomeoTaskDB) for more information on how to get the server running and how to use it.
+Refer to the ```server``` folder for more information on how to get the server running and how to use it.
+
+```cd``` into the ```server``` folder and run the following command:
+
+```json-server users.json``` 
 
 | method | path               | description            |
 |--------|--------------------|------------------------|
 | GET    | /api/users         | Get list of users      |
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## Getting Started
 
