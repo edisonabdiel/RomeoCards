@@ -33,6 +33,7 @@ RomeoCards is a demo dating app for the Erasys/trial task.
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
+- [Ant Design](https://ant.design/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [VS Code](https://code.visualstudio.com/)
 - [Git](https://git-scm.com/)
