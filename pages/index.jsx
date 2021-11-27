@@ -1,7 +1,7 @@
 //Next components
 import Head from 'next/head';
 //Custom components
-import { Navbar, UserCard, Loader, CardList } from '../components';
+import { Navbar, Loader, CardList } from '../components';
 //Icons
 import { GiGlassHeart } from 'react-icons/gi';
 //Services

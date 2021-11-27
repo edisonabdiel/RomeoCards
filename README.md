@@ -24,6 +24,7 @@ RomeoCards is a demo dating app for the Erasys/trial task.
 - Modern UI
 - Extremely easy to use and intuitive
 - Display a list of users and their details in a dynamicaly generated card
+- Search for users by name and update the list in real time
 - Teastable & Scalable
 - Resposinve to different screen sizes
 
@@ -48,6 +49,8 @@ RomeoCards is a demo dating app for the Erasys/trial task.
 The app was initialised completely from scratch in order to ensure a smooth integration between React - Next - Redux RTK - TailwindCSS.
 
 It retrives the data from a dedicated [JSON SERVER API](https://github.com/edisonabdiel/RomeoTaskDB) and displays it in cohesive manner.
+
+Integrates a simple yet efficient search feature that allows the user to search for users by name and update the list in real time.
 
 Components were built in a fashion that allows for a more responsive, dynamic and scalable experience.
 
