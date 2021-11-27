@@ -1,21 +1,21 @@
+//Next components
 import Head from 'next/head';
-import { Navbar, UserCard } from '../components';
-
-import {GiGlassHeart} from 'react-icons/gi';
-
-import Loader from '../components/Loader';
-
+//Custom components
+import { Navbar, UserCard, Loader, CardList } from '../components';
+//Icons
+import { GiGlassHeart } from 'react-icons/gi';
+//Services
 import { useGetUsersQuery } from '../services/usersApi';
-
+//Global styles
 import styles from '../styles/index.module.css';
 
 const Home = () => {
 
-  const { data: users, isLoading, error } = useGetUsersQuery();
+  const { data: usersData, isLoading, error } = useGetUsersQuery();
 
   if (error) return <p>Ooops! Something went wrong. Please try again <GiGlassHeart /></p>;
   if (isLoading) return <Loader />;
-  
+
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -26,7 +26,7 @@ const Home = () => {
       <main className={styles.container_main}>
         <Navbar />
         <div className={styles.container_cards}>
-          <UserCard users={users} />
+          <CardList usersData={usersData} />
         </div>
       </main>
 

@@ -1,21 +1,17 @@
-import React from "react";
+//Middleware
 import classNames from "classnames";
 import millify from "millify";
 //Icons
 import { AiFillHeart } from "react-icons/ai";
 import { FaKissWinkHeart } from "react-icons/fa";
-import { HiOutlineStatusOnline } from "react-icons/hi";
 import { RiRadioButtonLine } from "react-icons/ri";
-
+//Utility Functions
 import { getRandomNumber } from "../../utils/getRandomNumber";
 
 import styles from "./UserCard.module.css";
 
-const UserCard = ({ users }) => {
-
-    return (
+const UserCard = ({ user }) => (
         <>
-            {users.map((user) => (
                 <div className={classNames([styles.wrapper, styles.wrapperAnime])} key={user.id}>
                     <div className={styles.header}>
                         <div className={styles.imageWrapper}>
@@ -51,9 +47,7 @@ const UserCard = ({ users }) => {
                             }
                     </div>
                 </div>
-            ))}
         </>
     );
-};
 
 export default UserCard;

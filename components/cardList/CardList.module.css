@@ -1,0 +1,7 @@
+.container_cards {
+    @apply flex flex-wrap items-center justify-around max-w-6xl mt-6 sm:w-full;
+}
+
+.search_bar {
+    @apply w-screen max-w-lg text-center;
+}
